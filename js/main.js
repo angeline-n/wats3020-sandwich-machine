@@ -54,6 +54,11 @@ let orderTax = subtotal * waStateTaxRate; // Calculate the tax owed using the wa
 // Calculate `totalPrice` by adding `subtotal` and `orderTax`.
 let totalPrice = subtotal + orderTax;
 
+// Calculate totals for 10%, 15%, and 20% tips
+let tenPercent = totalPrice * 1.10;
+let fifteenPercent = totalPrice * 1.15;
+let twentyPercent = totalPrice * 1.20;
+
 
 let receiptTemplate = `
     <p>SANDWICH ORDER</p>
@@ -71,10 +76,20 @@ let receiptTemplate = `
     <p class="text-right">Tax: $${orderTax}</p>
     <p class="text-right">--------</p>
     <p class="text-right">Total: $${totalPrice}</p>
-`
+    <p>---------------------</p>
+    <p>Suggested Tips:</p>
+    <p class="text-right">Total with 10% Tip: $${tenPercent}
+    <p class="text-right">Total with 15% Tip: $${fifteenPercent}
+    <p class="text-right">Total with 20% Tip: $${twentyPercent}
+`;
 
 ///////////////////////////////////////////////////////////////////////
 // Do not edit below this line unless you are doing something fancy!
 //////////////////////////////////////////////////////////////////////
 let receiptText = document.querySelector("#receipt-text");
 receiptText.innerHTML = receiptTemplate;
+
+/*
+TODO Implement some kind of special deal logic that provides a discount to the user. (First two toppings at X price; 20% discount on toppings if you order more than three toppings,  etc.)
+TODO Implement a more complex discount that prompts the user with something like: "You've added two toppings, so you qualify for a free third topping! What would you like to add to your sandwich?" or "Would you like to double your meat today?" Be sure to include that additional information in your output of the order and adjust your price according to whatever your discount concept is.
+*/
