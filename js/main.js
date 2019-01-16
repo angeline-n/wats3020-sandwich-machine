@@ -1,17 +1,16 @@
 /* JavaScript for WATS 3020 Sandwich Machine Assignment */
 
-
+// Get what type of bread the customer wants using prompt
 let bread = prompt('What kind of bread (e.g.white, wheat, flat) would you like?');
 
-
+// Get what types (if any) meats the customer wants using prompt
 let meats = prompt('What kind of meat would you like? Separate meats with a comma if you would like more than one (e.g. bacon, turkey)? If you would like none, enter "0".');
 
-
+// Get what types (if any) toppings the customer wants using prompt
 let toppings = prompt('What kind of toppings would you like? Separate toppings with a comma (e.g. cheddar cheese, lettuce, tomatoes). If you would like none, enter "0".')
 
-
+// Get what types (if any) condiments the customer wants using prompt
 let condiments = prompt('What kind of condiments would you like? Separate condiments with a comma (e.g. mayo, ketchup). If you would like none, enter "0".')
-
 
 let prices = {
     sandwich: 5, // Base price for a sandwich is $5, includes bread
@@ -20,24 +19,27 @@ let prices = {
     condiment: 0.25 // Each condiment costs $0.25
 };
 
+// Change string inputs into arrays by splitting at comma
 let meatArray = meats.split(',');
 let toppingArray = toppings.split(',');
 let condimentArray = condiments.split(',');
 
 if (meats==='0'){
-    meatCost = 0;
+    meatCost = 0; // if input was 0, then customer wanted no meat and the price would be $0
 } else {
-    meatCost = meatArray.length * prices.meat; // while it currently costs 1 dollar and thus would be equal to the length, the price may change
-};
+    meatCost = meatArray.length * prices.meat; // otherwise the length of the array is the number of meats; that multiplied by the price is the cost
+}; // while it currently costs 1 dollar and thus would be equal to the length, the price may change
 
+// Find toppingCost in same way as meatCost
 if (toppings==='0'){
-    toppingCost = 0;
+    toppingCost = 0; 
 } else {
     toppingCost = toppingArray.length * prices.topping;
 };
 
+// Find condimentCost in same way as meatCost and toppingCost
 if (condiments==='0'){
-    condimentCost = 0;
+    condimentCost = 0; 
 } else {
     condimentCost = condimentArray.length * prices.condiment;
 };
@@ -45,9 +47,9 @@ if (condiments==='0'){
 // Combine the costs of each part of the sandwich to get the subtotal.
 let subtotal = prices.sandwich + meatCost + toppingCost + condimentCost;
 
-// Calculate the tax owed using the waStateTaxRate.
+
 let waStateTaxRate = 0.065;
-let orderTax = subtotal * waStateTaxRate;
+let orderTax = subtotal * waStateTaxRate; // Calculate the tax owed using the waStateTaxRate.
 
 // Calculate `totalPrice` by adding `subtotal` and `orderTax`.
 let totalPrice = subtotal + orderTax;
