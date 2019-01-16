@@ -28,7 +28,7 @@ in that file, completing every task listed.
 
 ## Stretch Goals
 
-If the Basic Requirements are easy enough to accmoplish, then you are encouraged
+If the Basic Requirements are easy enough to accomplish, then you are encouraged
 to attempt some more complex tasks, too. These are not spelled out in `main.js`,
 so you will have to figure out how to get them into your code on your own.
 
