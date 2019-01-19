@@ -7,10 +7,10 @@ let bread = prompt('What kind of bread (e.g.white, wheat, flat) would you like?'
 let meats = prompt('What kind of meat would you like? Separate meats with a comma if you would like more than one (e.g. bacon, turkey)? If you would like none, enter "0".');
 
 // Get what types (if any) toppings the customer wants using prompt
-let toppings = prompt('What kind of toppings would you like? Separate toppings with a comma (e.g. cheddar cheese, lettuce, tomatoes). If you would like none, enter "0".')
+let toppings = prompt('What kind of toppings would you like? Separate toppings with a comma (e.g. cheddar cheese, lettuce, tomatoes). If you would like none, enter "0".');
 
 // Get what types (if any) condiments the customer wants using prompt
-let condiments = prompt('What kind of condiments would you like? Separate condiments with a comma (e.g. mayo, ketchup). If you would like none, enter "0".')
+let condiments = prompt('What kind of condiments would you like? Separate condiments with a comma (e.g. mayo, ketchup). If you would like none, enter "0".');
 
 let prices = {
     sandwich: 5, // Base price for a sandwich is $5, includes bread
