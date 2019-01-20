@@ -15,6 +15,8 @@ let toppingArray = toppings.split(',');
 // Topping special deal: get one free topping for every two
 let moreToppings = []; 
 
+/*
+
 if (toppingArray.length !== 0 || toppingArray.length !== 1){ // if qualify for the special
 	specialQuantity = Math.floor(toppingArray.length / 2); // calculate how many free toppings they get
 	toppingSpecial = prompt('You qualify for our Buy 2 Toppings, Get 1 Free Special. Would you like to take part in the special?');
@@ -41,9 +43,9 @@ if (toppingArray.length !== 0 || toppingArray.length !== 1){ // if qualify for t
                         /*toppingArray.push(moreToppings[1]); // takes the first element in moreToppings and adds it to the end of toppingArray
                         moreToppings.shift(); // deletes the first element in moreToppings
                         */
-                    }
-                }    
-            } else {
+                //    }
+              //  }    
+           // } else { 
                 /* TODO: Figure out what to do if the customer:
                  *puts in 3 toppings the first time and doesn't want additional toppings and instead would like their third one free
                  *puts in 6 toppings the first time and doesn't want additional toppings and instead would like two of them for free
@@ -51,7 +53,7 @@ if (toppingArray.length !== 0 || toppingArray.length !== 1){ // if qualify for t
                  *accidentally puts more than one topping per free topping prompt
             } */
 
-        } else{
+      //  } else{
             /*
             let i = 1;
             let b = specialQuantity;
@@ -62,8 +64,8 @@ if (toppingArray.length !== 0 || toppingArray.length !== 1){ // if qualify for t
                 b--;
             }
         }; NEED TO FINISH THIS BIT */
-    }
-}
+   // }
+//}
 
 let moreToppingsOrder = moreToppings.join(', ')
 if (moreToppings.length === 0){
